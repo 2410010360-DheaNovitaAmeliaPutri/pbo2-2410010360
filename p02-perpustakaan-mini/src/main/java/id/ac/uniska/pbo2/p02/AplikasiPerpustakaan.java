@@ -15,7 +15,7 @@ public static void main(String[] args) {
     perpus.tambah(new Buku("B001", "Laskar Pelangi", 2005, "Andrea Hirata"));
     perpus.tambah(new Buku("B002", "Clean Code", 2008, "Robert C. Martin"));
     perpus.tambah(new Majalah("M001", "Majalah Teknologi Kita", 2026, "Agustus"));
-    perpus.tambah(new Skripsi("S001", "Implementasi", 2025, "abcd","Teknik Informatika"));
+    perpus.tambah(new Skripsi("S001", "Aplikasi Sistem Informasi Akademik", 2025, "Pangestu","Teknik Informatika"));
     Anggota siti = new Anggota("2410010123", "Siti Rahmah");
     Anggota budi = new Anggota("2410010456", "Budi Santoso");
     tampilkanDaftar(perpus);
