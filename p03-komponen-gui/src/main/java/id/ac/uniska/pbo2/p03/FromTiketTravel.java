@@ -24,7 +24,7 @@ public class FromTiketTravel extends javax.swing.JFrame {
     public FromTiketTravel() {
         initComponents();
         
-        namaField.putClientProperty(
+        namaPemesananField.putClientProperty(
             "JTextField.placeholderText",
             "Nama sesuai KTP"
         );
@@ -69,7 +69,7 @@ public class FromTiketTravel extends javax.swing.JFrame {
             fasilitas.setLength(fasilitas.length() - 2);
         }
 
-        String pesan = "Nama Pemesan: " + namaField.getText()
+        String pesan = "Nama Pemesan: " + namaPemesananField.getText()
                 + "\nNomor HP: " + noHpField.getText()
                 + "\nKota Tujuan: " + kotaCombo.getSelectedItem()
                 + "\nKelas: " + kelas
@@ -106,16 +106,15 @@ public class FromTiketTravel extends javax.swing.JFrame {
     private void initComponents() {
 
         kelasGroup = new javax.swing.ButtonGroup();
-        namaLabel = new javax.swing.JLabel();
+        namaPemesananLabel = new javax.swing.JLabel();
         noHpLabel = new javax.swing.JLabel();
         kotaCombo = new javax.swing.JComboBox<>();
-        namaField = new javax.swing.JTextField();
+        namaPemesananField = new javax.swing.JTextField();
         noHpField = new javax.swing.JTextField();
         kotaLabel = new javax.swing.JLabel();
         kelasLabel = new javax.swing.JLabel();
         ekonomiRadio = new javax.swing.JRadioButton();
         fasilitasLabel = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         pesanButton = new javax.swing.JButton();
         temaToggle = new javax.swing.JToggleButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -129,13 +128,13 @@ public class FromTiketTravel extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        namaLabel.setText("Nama Pemesanan");
+        namaPemesananLabel.setText("Nama Pemesanan");
 
         noHpLabel.setText("No HP");
 
         kotaCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Banjarbaru", "Martapura", "Palangka Raya", "Samarinda", "Balikpapan" }));
 
-        namaField.addActionListener(this::namaFieldActionPerformed);
+        namaPemesananField.addActionListener(this::namaPemesananFieldActionPerformed);
 
         kotaLabel.setText("Kota Tujuan");
 
@@ -188,9 +187,9 @@ public class FromTiketTravel extends javax.swing.JFrame {
                         .addGap(72, 72, 72)
                         .addComponent(noHpField))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(namaLabel)
+                        .addComponent(namaPemesananLabel)
                         .addGap(12, 12, 12)
-                        .addComponent(namaField))
+                        .addComponent(namaPemesananField))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(kotaLabel)
@@ -207,22 +206,19 @@ public class FromTiketTravel extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
+                            .addComponent(fasilitasLabel)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(fasilitasLabel)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addComponent(catatanLabel)))
+                                .addGap(6, 6, 6)
+                                .addComponent(catatanLabel)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(bagasiCheck)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(bagasiCheck)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(makanCheck)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(asuransiCheck, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(makanCheck)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(asuransiCheck, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 28, Short.MAX_VALUE)))
                 .addGap(9, 9, 9))
         );
@@ -231,8 +227,8 @@ public class FromTiketTravel extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(namaLabel)
-                    .addComponent(namaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(namaPemesananLabel)
+                    .addComponent(namaPemesananField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(noHpLabel)
@@ -257,9 +253,7 @@ public class FromTiketTravel extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(catatanLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(temaToggle)
                     .addComponent(pesanButton))
@@ -269,9 +263,9 @@ public class FromTiketTravel extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void namaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namaFieldActionPerformed
+    private void namaPemesananFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namaPemesananFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_namaFieldActionPerformed
+    }//GEN-LAST:event_namaPemesananFieldActionPerformed
 
     private void pesanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesanButtonActionPerformed
         // TODO add your handling code here:
@@ -303,15 +297,14 @@ public class FromTiketTravel extends javax.swing.JFrame {
     private javax.swing.JRadioButton ekonomiRadio;
     private javax.swing.JRadioButton eksekutifRadio;
     private javax.swing.JLabel fasilitasLabel;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.ButtonGroup kelasGroup;
     private javax.swing.JLabel kelasLabel;
     private javax.swing.JComboBox<String> kotaCombo;
     private javax.swing.JLabel kotaLabel;
     private javax.swing.JCheckBox makanCheck;
-    private javax.swing.JTextField namaField;
-    private javax.swing.JLabel namaLabel;
+    private javax.swing.JTextField namaPemesananField;
+    private javax.swing.JLabel namaPemesananLabel;
     private javax.swing.JTextField noHpField;
     private javax.swing.JLabel noHpLabel;
     private javax.swing.JButton pesanButton;
