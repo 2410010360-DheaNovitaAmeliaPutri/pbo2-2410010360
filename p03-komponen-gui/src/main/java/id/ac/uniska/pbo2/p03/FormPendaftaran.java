@@ -128,6 +128,7 @@ public class FormPendaftaran extends javax.swing.JFrame {
         namaField.addActionListener(this::namaFieldActionPerformed);
 
         prodiCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Teknik Informatika", "Sistem Informasi" }));
+        prodiCombo.addActionListener(this::prodiComboActionPerformed);
 
         jenisKelaminGroup.add(perempuanRadio);
         perempuanRadio.setText("Perempuan");
@@ -264,6 +265,10 @@ public class FormPendaftaran extends javax.swing.JFrame {
             gantiTema(temaToggle.isSelected());
                                                   
     }//GEN-LAST:event_temaToggleActionPerformed
+
+    private void prodiComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prodiComboActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_prodiComboActionPerformed
 
     /**
      * @param args the command line arguments
