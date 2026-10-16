@@ -238,8 +238,10 @@ public class GaleriLayout extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        // Blok Nimbus buatan NetBeans diganti dengan tema FlatLaf
         FlatLightLaf.setup();
-
+        
+        // Tampilkan form di Event Dispatch Thread
         java.awt.EventQueue.invokeLater(() -> new GaleriLayout().setVisible(true));
     }
 
