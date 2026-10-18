@@ -253,7 +253,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 10;
         gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         formPanel.add(persetujuanCheckBox, gridBagConstraints);
 
         kontakLabel.setText("Kontak");
