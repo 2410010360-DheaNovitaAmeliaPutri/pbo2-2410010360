@@ -19,7 +19,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="3"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,44,0,0,2,117"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,52,0,0,2,117"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
@@ -60,7 +60,7 @@
             <Property name="verticalGap" type="int" value="8"/>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="westButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="WEST"/>
               </Properties>
@@ -70,12 +70,12 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="northButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="NORTH"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="northButtonActionPerformed"/>
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
@@ -83,7 +83,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton3">
+            <Component class="javax.swing.JButton" name="centerButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="CENTER"/>
               </Properties>
@@ -93,7 +93,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton4">
+            <Component class="javax.swing.JButton" name="southButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="SOUTH"/>
               </Properties>
@@ -103,7 +103,7 @@
                 </Constraint>
               </Constraints>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton5">
+            <Component class="javax.swing.JButton" name="eastButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="EAST"/>
               </Properties>
@@ -130,40 +130,40 @@
             <Property name="verticalGap" type="int" value="8"/>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="jButton6">
+            <Component class="javax.swing.JButton" name="baruButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Baru"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton7">
+            <Component class="javax.swing.JButton" name="bukaButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Buka"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton8">
+            <Component class="javax.swing.JButton" name="simpanButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Simpan"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton8ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="simpanButtonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton9">
+            <Component class="javax.swing.JButton" name="simpanSebagaiButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Simpan Sebagai"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton10">
+            <Component class="javax.swing.JButton" name="cetakButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cetak"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton11">
+            <Component class="javax.swing.JButton" name="bagikanButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Bagikan"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton12">
+            <Component class="javax.swing.JButton" name="keluarButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Keluar"/>
               </Properties>
@@ -186,53 +186,53 @@
             <Property name="verticalGap" type="int" value="8"/>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="jButton13">
+            <Component class="javax.swing.JButton" name="angka1Button">
               <Properties>
                 <Property name="text" type="java.lang.String" value="1"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton14">
+            <Component class="javax.swing.JButton" name="angka2Button">
               <Properties>
                 <Property name="text" type="java.lang.String" value="2"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton14ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="angka2ButtonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton15">
+            <Component class="javax.swing.JButton" name="angka3Button">
               <Properties>
                 <Property name="text" type="java.lang.String" value="3"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton16">
+            <Component class="javax.swing.JButton" name="angka4Button">
               <Properties>
                 <Property name="text" type="java.lang.String" value="4"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton19">
+            <Component class="javax.swing.JButton" name="angka5Button">
               <Properties>
                 <Property name="text" type="java.lang.String" value="5"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton19ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="angka5ButtonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton18">
+            <Component class="javax.swing.JButton" name="angka6Button">
               <Properties>
                 <Property name="text" type="java.lang.String" value="6"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton20">
+            <Component class="javax.swing.JButton" name="angka7Button">
               <Properties>
                 <Property name="text" type="java.lang.String" value="7"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton21">
+            <Component class="javax.swing.JButton" name="angka8Button">
               <Properties>
                 <Property name="text" type="java.lang.String" value="8"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton17">
+            <Component class="javax.swing.JButton" name="angka9Button">
               <Properties>
                 <Property name="text" type="java.lang.String" value="9"/>
               </Properties>
@@ -252,22 +252,22 @@
             <Property name="axis" type="int" value="1"/>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="jButton22">
+            <Component class="javax.swing.JButton" name="dashboardButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Dashboard"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton23">
+            <Component class="javax.swing.JButton" name="dataMahasiswaButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Data Mahasiswa"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton24">
+            <Component class="javax.swing.JButton" name="dataMatkulButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Data Mata Kuliah"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton25">
+            <Component class="javax.swing.JButton" name="laporanButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Laporan"/>
               </Properties>
@@ -309,17 +309,17 @@
                 <Property name="axis" type="int" value="1"/>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="jButton26">
+                <Component class="javax.swing.JButton" name="seninButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Senin"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton27">
+                <Component class="javax.swing.JButton" name="selasaButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Selasa"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton28">
+                <Component class="javax.swing.JButton" name="rabuButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Rabu"/>
                   </Properties>
@@ -339,19 +339,19 @@
                 <Property name="verticalGap" type="int" value="0"/>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="jButton30">
+                <Component class="javax.swing.JButton" name="hapusButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Hapus"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton29">
+                <Component class="javax.swing.JButton" name="simpanCatatanButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Simpan"/>
                   </Properties>
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+            <Container class="javax.swing.JScrollPane" name="catatanScrollPane">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
               </AuxValues>
@@ -363,7 +363,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTextArea" name="jTextArea1">
+                <Component class="javax.swing.JTextArea" name="catatanArea">
                   <Properties>
                     <Property name="columns" type="int" value="20"/>
                     <Property name="rows" type="int" value="5"/>

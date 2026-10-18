@@ -35,45 +35,45 @@ public class GaleriLayout extends javax.swing.JFrame {
 
         layoutTab = new javax.swing.JTabbedPane();
         borderPanel = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        westButton = new javax.swing.JButton();
+        northButton = new javax.swing.JButton();
+        centerButton = new javax.swing.JButton();
+        southButton = new javax.swing.JButton();
+        eastButton = new javax.swing.JButton();
         flowPanel = new javax.swing.JPanel();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
+        baruButton = new javax.swing.JButton();
+        bukaButton = new javax.swing.JButton();
+        simpanButton = new javax.swing.JButton();
+        simpanSebagaiButton = new javax.swing.JButton();
+        cetakButton = new javax.swing.JButton();
+        bagikanButton = new javax.swing.JButton();
+        keluarButton = new javax.swing.JButton();
         gridPanel = new javax.swing.JPanel();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
+        angka1Button = new javax.swing.JButton();
+        angka2Button = new javax.swing.JButton();
+        angka3Button = new javax.swing.JButton();
+        angka4Button = new javax.swing.JButton();
+        angka5Button = new javax.swing.JButton();
+        angka6Button = new javax.swing.JButton();
+        angka7Button = new javax.swing.JButton();
+        angka8Button = new javax.swing.JButton();
+        angka9Button = new javax.swing.JButton();
         boxPanel = new javax.swing.JPanel();
-        jButton22 = new javax.swing.JButton();
-        jButton23 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
+        dashboardButton = new javax.swing.JButton();
+        dataMahasiswaButton = new javax.swing.JButton();
+        dataMatkulButton = new javax.swing.JButton();
+        laporanButton = new javax.swing.JButton();
         gabunganPanel = new javax.swing.JPanel();
         catatanJudulLabel = new javax.swing.JLabel();
         hariPanel = new javax.swing.JPanel();
-        jButton26 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
-        jButton28 = new javax.swing.JButton();
+        seninButton = new javax.swing.JButton();
+        selasaButton = new javax.swing.JButton();
+        rabuButton = new javax.swing.JButton();
         aksiPanel = new javax.swing.JPanel();
-        jButton30 = new javax.swing.JButton();
-        jButton29 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        hapusButton = new javax.swing.JButton();
+        simpanCatatanButton = new javax.swing.JButton();
+        catatanScrollPane = new javax.swing.JScrollPane();
+        catatanArea = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Galeri Layout Manager");
@@ -83,96 +83,96 @@ public class GaleriLayout extends javax.swing.JFrame {
         borderPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
         borderPanel.setLayout(new java.awt.BorderLayout(8, 8));
 
-        jButton1.setText("WEST");
-        borderPanel.add(jButton1, java.awt.BorderLayout.WEST);
+        westButton.setText("WEST");
+        borderPanel.add(westButton, java.awt.BorderLayout.WEST);
 
-        jButton2.setText("NORTH");
-        jButton2.addActionListener(this::jButton2ActionPerformed);
-        borderPanel.add(jButton2, java.awt.BorderLayout.NORTH);
+        northButton.setText("NORTH");
+        northButton.addActionListener(this::northButtonActionPerformed);
+        borderPanel.add(northButton, java.awt.BorderLayout.NORTH);
 
-        jButton3.setText("CENTER");
-        borderPanel.add(jButton3, java.awt.BorderLayout.CENTER);
+        centerButton.setText("CENTER");
+        borderPanel.add(centerButton, java.awt.BorderLayout.CENTER);
 
-        jButton4.setText("SOUTH");
-        borderPanel.add(jButton4, java.awt.BorderLayout.SOUTH);
+        southButton.setText("SOUTH");
+        borderPanel.add(southButton, java.awt.BorderLayout.SOUTH);
 
-        jButton5.setText("EAST");
-        borderPanel.add(jButton5, java.awt.BorderLayout.EAST);
+        eastButton.setText("EAST");
+        borderPanel.add(eastButton, java.awt.BorderLayout.EAST);
 
         layoutTab.addTab("BorderLayout", borderPanel);
 
         flowPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 8, 8));
 
-        jButton6.setText("Baru");
-        flowPanel.add(jButton6);
+        baruButton.setText("Baru");
+        flowPanel.add(baruButton);
 
-        jButton7.setText("Buka");
-        flowPanel.add(jButton7);
+        bukaButton.setText("Buka");
+        flowPanel.add(bukaButton);
 
-        jButton8.setText("Simpan");
-        jButton8.addActionListener(this::jButton8ActionPerformed);
-        flowPanel.add(jButton8);
+        simpanButton.setText("Simpan");
+        simpanButton.addActionListener(this::simpanButtonActionPerformed);
+        flowPanel.add(simpanButton);
 
-        jButton9.setText("Simpan Sebagai");
-        flowPanel.add(jButton9);
+        simpanSebagaiButton.setText("Simpan Sebagai");
+        flowPanel.add(simpanSebagaiButton);
 
-        jButton10.setText("Cetak");
-        flowPanel.add(jButton10);
+        cetakButton.setText("Cetak");
+        flowPanel.add(cetakButton);
 
-        jButton11.setText("Bagikan");
-        flowPanel.add(jButton11);
+        bagikanButton.setText("Bagikan");
+        flowPanel.add(bagikanButton);
 
-        jButton12.setText("Keluar");
-        flowPanel.add(jButton12);
+        keluarButton.setText("Keluar");
+        flowPanel.add(keluarButton);
 
         layoutTab.addTab("FlowLayout", flowPanel);
 
         gridPanel.setLayout(new java.awt.GridLayout(3, 3, 8, 8));
 
-        jButton13.setText("1");
-        gridPanel.add(jButton13);
+        angka1Button.setText("1");
+        gridPanel.add(angka1Button);
 
-        jButton14.setText("2");
-        jButton14.addActionListener(this::jButton14ActionPerformed);
-        gridPanel.add(jButton14);
+        angka2Button.setText("2");
+        angka2Button.addActionListener(this::angka2ButtonActionPerformed);
+        gridPanel.add(angka2Button);
 
-        jButton15.setText("3");
-        gridPanel.add(jButton15);
+        angka3Button.setText("3");
+        gridPanel.add(angka3Button);
 
-        jButton16.setText("4");
-        gridPanel.add(jButton16);
+        angka4Button.setText("4");
+        gridPanel.add(angka4Button);
 
-        jButton19.setText("5");
-        jButton19.addActionListener(this::jButton19ActionPerformed);
-        gridPanel.add(jButton19);
+        angka5Button.setText("5");
+        angka5Button.addActionListener(this::angka5ButtonActionPerformed);
+        gridPanel.add(angka5Button);
 
-        jButton18.setText("6");
-        gridPanel.add(jButton18);
+        angka6Button.setText("6");
+        gridPanel.add(angka6Button);
 
-        jButton20.setText("7");
-        gridPanel.add(jButton20);
+        angka7Button.setText("7");
+        gridPanel.add(angka7Button);
 
-        jButton21.setText("8");
-        gridPanel.add(jButton21);
+        angka8Button.setText("8");
+        gridPanel.add(angka8Button);
 
-        jButton17.setText("9");
-        gridPanel.add(jButton17);
+        angka9Button.setText("9");
+        gridPanel.add(angka9Button);
 
         layoutTab.addTab("GridLayout", gridPanel);
 
         boxPanel.setLayout(new javax.swing.BoxLayout(boxPanel, javax.swing.BoxLayout.Y_AXIS));
 
-        jButton22.setText("Dashboard");
-        boxPanel.add(jButton22);
+        dashboardButton.setText("Dashboard");
+        boxPanel.add(dashboardButton);
 
-        jButton23.setText("Data Mahasiswa");
-        boxPanel.add(jButton23);
+        dataMahasiswaButton.setText("Data Mahasiswa");
+        boxPanel.add(dataMahasiswaButton);
 
-        jButton24.setText("Data Mata Kuliah");
-        boxPanel.add(jButton24);
+        dataMatkulButton.setText("Data Mata Kuliah");
+        boxPanel.add(dataMatkulButton);
 
-        jButton25.setText("Laporan");
-        boxPanel.add(jButton25);
+        laporanButton.setText("Laporan");
+        boxPanel.add(laporanButton);
 
         layoutTab.addTab("BoxLayout", boxPanel);
 
@@ -183,32 +183,32 @@ public class GaleriLayout extends javax.swing.JFrame {
 
         hariPanel.setLayout(new javax.swing.BoxLayout(hariPanel, javax.swing.BoxLayout.Y_AXIS));
 
-        jButton26.setText("Senin");
-        hariPanel.add(jButton26);
+        seninButton.setText("Senin");
+        hariPanel.add(seninButton);
 
-        jButton27.setText("Selasa");
-        hariPanel.add(jButton27);
+        selasaButton.setText("Selasa");
+        hariPanel.add(selasaButton);
 
-        jButton28.setText("Rabu");
-        hariPanel.add(jButton28);
+        rabuButton.setText("Rabu");
+        hariPanel.add(rabuButton);
 
         gabunganPanel.add(hariPanel, java.awt.BorderLayout.LINE_START);
 
         aksiPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 8, 0));
 
-        jButton30.setText("Hapus");
-        aksiPanel.add(jButton30);
+        hapusButton.setText("Hapus");
+        aksiPanel.add(hapusButton);
 
-        jButton29.setText("Simpan");
-        aksiPanel.add(jButton29);
+        simpanCatatanButton.setText("Simpan");
+        aksiPanel.add(simpanCatatanButton);
 
         gabunganPanel.add(aksiPanel, java.awt.BorderLayout.PAGE_END);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        catatanArea.setColumns(20);
+        catatanArea.setRows(5);
+        catatanScrollPane.setViewportView(catatanArea);
 
-        gabunganPanel.add(jScrollPane1, java.awt.BorderLayout.CENTER);
+        gabunganPanel.add(catatanScrollPane, java.awt.BorderLayout.CENTER);
 
         layoutTab.addTab("Gabungan", gabunganPanel);
 
@@ -218,21 +218,21 @@ public class GaleriLayout extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void northButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_northButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_northButtonActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void simpanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_simpanButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_simpanButtonActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+    private void angka2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka2ButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton14ActionPerformed
+    }//GEN-LAST:event_angka2ButtonActionPerformed
 
-    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+    private void angka5ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_angka5ButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton19ActionPerformed
+    }//GEN-LAST:event_angka5ButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -247,45 +247,45 @@ public class GaleriLayout extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel aksiPanel;
+    private javax.swing.JButton angka1Button;
+    private javax.swing.JButton angka2Button;
+    private javax.swing.JButton angka3Button;
+    private javax.swing.JButton angka4Button;
+    private javax.swing.JButton angka5Button;
+    private javax.swing.JButton angka6Button;
+    private javax.swing.JButton angka7Button;
+    private javax.swing.JButton angka8Button;
+    private javax.swing.JButton angka9Button;
+    private javax.swing.JButton bagikanButton;
+    private javax.swing.JButton baruButton;
     private javax.swing.JPanel borderPanel;
     private javax.swing.JPanel boxPanel;
+    private javax.swing.JButton bukaButton;
+    private javax.swing.JTextArea catatanArea;
     private javax.swing.JLabel catatanJudulLabel;
+    private javax.swing.JScrollPane catatanScrollPane;
+    private javax.swing.JButton centerButton;
+    private javax.swing.JButton cetakButton;
+    private javax.swing.JButton dashboardButton;
+    private javax.swing.JButton dataMahasiswaButton;
+    private javax.swing.JButton dataMatkulButton;
+    private javax.swing.JButton eastButton;
     private javax.swing.JPanel flowPanel;
     private javax.swing.JPanel gabunganPanel;
     private javax.swing.JPanel gridPanel;
+    private javax.swing.JButton hapusButton;
     private javax.swing.JPanel hariPanel;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton30;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JButton keluarButton;
+    private javax.swing.JButton laporanButton;
     private javax.swing.JTabbedPane layoutTab;
+    private javax.swing.JButton northButton;
+    private javax.swing.JButton rabuButton;
+    private javax.swing.JButton selasaButton;
+    private javax.swing.JButton seninButton;
+    private javax.swing.JButton simpanButton;
+    private javax.swing.JButton simpanCatatanButton;
+    private javax.swing.JButton simpanSebagaiButton;
+    private javax.swing.JButton southButton;
+    private javax.swing.JButton westButton;
     // End of variables declaration//GEN-END:variables
 }
