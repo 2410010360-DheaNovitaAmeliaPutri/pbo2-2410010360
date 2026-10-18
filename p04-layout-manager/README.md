@@ -50,18 +50,20 @@
 3\. Setelah setMinimumSize(getSize()) dihapus, jendela dapat dikecilkan terlalu jauh sehingga komponen form, terutama bagian isian seperti Text Field dan Text Area menjadi terlalu kecil sehingga komponen form terdesak dan tampilannya menjadi tidak rapi. Pada bagian tombol juga bisa berubah posisinya menjadi bersusun kebawah saat dipersempit lebar jendelanya.  
 
 ## F. Saran dari Teman pada Tahap 4
-Nama Teman:
+Nama Teman: Ariefa Salsabilla Azzahra (2410010519)
 | No | Pemeriksaan | Ya atau Belum |
 |:--------|:------|:------|
-|1 | Label singkat, jelas, dan sejajar||
-|2 | Isian dikelompokkan dengan judul bagian||
-|3 | Placeholder dipakai untuk isian yang punya format||
-|4 | Komponen sesuai jenis data||
-|5 | Tombol utama menonjol dan berada di kanan bawah||
-|6 | Jarak antar komponen konsisten||
-|7 | Form tetap rapi saat jendela dilebarkan dan ditinggikan||
-|8 | Tampilan dibuat dengan JFrame Form dan layout manager bukan Null Layout atau Absolute Layout||
+|1 | Label singkat, jelas, dan sejajar|Ya|
+|2 | Isian dikelompokkan dengan judul bagian|Ya|
+|3 | Placeholder dipakai untuk isian yang punya format|Ya|
+|4 | Komponen sesuai jenis data|Ya|
+|5 | Tombol utama menonjol dan berada di kanan bawah|Ya|
+|6 | Jarak antar komponen konsisten|Ya|
+|7 | Form tetap rapi saat jendela dilebarkan dan ditinggikan|Ya (dilebarkan rapi; saat ditinggikan belum terlihat di screenshot)|
+|8 | Tampilan dibuat dengan JFrame Form dan layout manager bukan Null Layout atau Absolute Layout|Ya|
+
+Saran: Saran dari saya hapus P04LayoutManager.java bawaan wizard karena panduan meminta file itu dihapus.
 
 ### Deklarasi penggunaan AI
-disini saya menggunakan Claude untuk membantu saya mengatur penempatan pada bagian jenis anggota agar bisa menjadi tersusun secara horizontal dan bisa berada di posisi kiri (West), dan disarankan oleh claude menggunakan FlowLayout pada bagian radio button tersebut.
+disini saya menggunakan Claude untuk membantu saya mengatur penempatan pada bagian jenis anggota agar bisa menjadi tersusun secara horizontal dan bisa berada di posisi kiri (West), dan disarankan oleh claude menggunakan FlowLayout untuk bagian radio button tersebut.
 
