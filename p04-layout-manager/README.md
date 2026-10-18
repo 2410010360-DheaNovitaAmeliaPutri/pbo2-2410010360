@@ -2,9 +2,13 @@
 
 ## A. Jawaban Refleksi (Bagian G) 
 1\.Karena posisi komponen ditentukan secara manual sehingga tampilan mudah berantakan ketika ukuran jendela berubah. Layout Manager lebih fleksibel dan dapat menyesuaikan ukuran komponen.
+
 2\. FlowLayout mempertahankan ukuran komponen dan mengatur posisinya dalam baris, sedangkan GridLayout membagi ruang menjadi sel yang sama besar sehingga komponen ikut melebar sesuai ukuran sel
+
 3\. Weight X mengatur pembagian sisa lebar pada kolom, sedangkan Fill menentukan apakah komponen mengisi ruang yang tersedia. Pada form, input menggunakan Weight X = 1.0 dan Fill = Horizontal agar dapat melebar.
+
 4\. Agar susunan form lebih teratur dan dapat digabung dengan layout lain. formPanel digunakan untuk menyusun isian dengan GridBagLayout, sedangkan isiPanel menjadi pembungkusnya. Peletakan di North membuat form tetap berada di bagian atas.
+
 5\. Dua prinsip desain yaitu:
 -Keselarasan: label dan kolom isian dibuat sejajar sehingga mudah dibaca dari atas ke bawah.
 -Kedekatan: data yang berkaitan dikelompokkan, seperti Data Anggota, Kontak, dan Persetujuan.
@@ -57,5 +61,5 @@ Nama Teman:
 |8 | Tampilan dibuat dengan JFrame Form dan layout manager bukan Null Layout atau Absolute Layout||
 
 ### Deklarasi penggunaan AI
-disini saya menggunakan Claude untuk membantu saya mengatur penempatan pada bagian jenis anggota dan disarankan menggunakan FlowLayout pada radio button agar bisa menjadi tersusun ke kanan semua dan bisa berada di posisi kiri. 
+disini saya menggunakan Claude untuk membantu saya mengatur penempatan pada bagian jenis anggota agar bisa menjadi tersusun secara horizontal dan bisa berada di posisi kiri (West), dan disarankan oleh claude menggunakan FlowLayout pada bagian radio button tersebut.
 
