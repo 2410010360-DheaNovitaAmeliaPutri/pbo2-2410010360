@@ -37,7 +37,9 @@
 ## E. Jawaban Eksperimen
 ### - Praktikum 2:
 1\. Yang berubah yaitu posisi tombol menjadi berada di tengah, dan pada initComponents() nilai FlowLayout.LEFT berubah menjadi FlowLayout.CENTER.
+
 2\. Yang terbentuk yaitu 5 baris, karena terdapat 9 tombol dengan 2 kolom, sehingga GridLayout otomatis menambah baris untuk menampung seluruh tombol.
+
 3\. Lebar tombol berubah menjadi lebih lebar mengikuti ruang panel. Vertical Strut membuat jarak vertikal di antara setiap tombol sehingga susunan tombol menjadi lebih rapi dan tidak terlalu berdempetan.
 
 ### - Praktikum 4:
