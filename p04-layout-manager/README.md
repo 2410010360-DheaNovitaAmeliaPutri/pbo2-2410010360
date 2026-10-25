@@ -59,7 +59,7 @@ Nama Teman: Ariefa Salsabilla Azzahra (2410010519)
 |4 | Komponen sesuai jenis data|Ya|
 |5 | Tombol utama menonjol dan berada di kanan bawah|Ya|
 |6 | Jarak antar komponen konsisten|Ya|
-|7 | Form tetap rapi saat jendela dilebarkan dan ditinggikan|Ya (dilebarkan rapi; saat ditinggikan belum terlihat di screenshot)|
+|7 | Form tetap rapi saat jendela dilebarkan dan ditinggikan|Ya|
 |8 | Tampilan dibuat dengan JFrame Form dan layout manager bukan Null Layout atau Absolute Layout|Ya|
 
 Saran: Saran dari saya hapus P04LayoutManager.java bawaan wizard karena panduan meminta file itu dihapus.

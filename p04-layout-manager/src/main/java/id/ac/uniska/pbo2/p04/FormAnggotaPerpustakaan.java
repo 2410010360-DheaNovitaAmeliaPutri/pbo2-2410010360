@@ -25,7 +25,6 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         keteranganLabel.putClientProperty("FlatLaf.style", "foreground: $Label.disabledForeground");
         dataAnggotaLabel.putClientProperty("FlatLaf.styleClass", "h4");
         kontakLabel.putClientProperty("FlatLaf.styleClass", "h4");
-        persetujuanLabel.putClientProperty("FlatLaf.styleClass", "h4");
         npmField.putClientProperty("JTextField.placeholderText", "2410010001");
         emailField.putClientProperty("JTextField.placeholderText", "nama@contoh.com");
         hpField.putClientProperty("JTextField.placeholderText", "08xxxxxxxxxx");
@@ -47,7 +46,6 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         jenisAnggotaGroup = new javax.swing.ButtonGroup();
-        jLabel1 = new javax.swing.JLabel();
         headerPanel = new javax.swing.JPanel();
         anggotaPerpusLabel = new javax.swing.JLabel();
         keteranganLabel = new javax.swing.JLabel();
@@ -72,22 +70,19 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         alamatLabel = new javax.swing.JLabel();
         alamatScrollPane = new javax.swing.JScrollPane();
         alamatArea = new javax.swing.JTextArea();
-        persetujuanCheckBox = new javax.swing.JCheckBox();
+        persetujuanCheck = new javax.swing.JCheckBox();
         kontakLabel = new javax.swing.JLabel();
-        persetujuanLabel = new javax.swing.JLabel();
         tombolPanel = new javax.swing.JPanel();
         batalButton = new javax.swing.JButton();
         daftarButton = new javax.swing.JButton();
 
-        jLabel1.setText("jLabel1");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Anggota Perpustakaan");
+        setTitle("Form Anggota Perpustakaan");
 
         headerPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(16, 16, 8, 16));
         headerPanel.setLayout(new javax.swing.BoxLayout(headerPanel, javax.swing.BoxLayout.Y_AXIS));
 
-        anggotaPerpusLabel.setText("Anggota Perpustakaan");
+        anggotaPerpusLabel.setText("Form Anggota Perpustakaan");
         headerPanel.add(anggotaPerpusLabel);
 
         keteranganLabel.setText("Lengkapi data berikut untuk mendaftar sebagai anggota perpustakaan.");
@@ -181,7 +176,6 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
 
         jenisAnggotaGroup.add(umumRadio);
         umumRadio.setText("Umum");
-        umumRadio.addActionListener(this::umumRadioActionPerformed);
         jenisAnggotaPanel.add(umumRadio);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -216,8 +210,6 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 0, 6, 12);
         formPanel.add(hpLabel, gridBagConstraints);
-
-        hpField.addActionListener(this::hpFieldActionPerformed);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 7;
@@ -247,14 +239,14 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
         formPanel.add(alamatScrollPane, gridBagConstraints);
 
-        persetujuanCheckBox.setText("Setuju dengan tata tertib perpustakaan");
-        persetujuanCheckBox.addActionListener(this::persetujuanCheckBoxActionPerformed);
+        persetujuanCheck.setText("Setuju dengan tata tertib perpustakaan");
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 10;
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 9;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        formPanel.add(persetujuanCheckBox, gridBagConstraints);
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        formPanel.add(persetujuanCheck, gridBagConstraints);
 
         kontakLabel.setText("Kontak");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -264,15 +256,6 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.insets = new java.awt.Insets(16, 0, 6, 0);
         formPanel.add(kontakLabel, gridBagConstraints);
-
-        persetujuanLabel.setText("Persetujuan");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 9;
-        gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.insets = new java.awt.Insets(16, 0, 6, 0);
-        formPanel.add(persetujuanLabel, gridBagConstraints);
 
         isiPanel.add(formPanel, java.awt.BorderLayout.NORTH);
 
@@ -292,18 +275,6 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void umumRadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_umumRadioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_umumRadioActionPerformed
-
-    private void persetujuanCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_persetujuanCheckBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_persetujuanCheckBoxActionPerformed
-
-    private void hpFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hpFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_hpFieldActionPerformed
 
     private void batalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_batalButtonActionPerformed
         // TODO add your handling code here:
@@ -335,7 +306,6 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
     private javax.swing.JTextField hpField;
     private javax.swing.JLabel hpLabel;
     private javax.swing.JPanel isiPanel;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.ButtonGroup jenisAnggotaGroup;
     private javax.swing.JLabel jenisAnggotaLabel;
     private javax.swing.JPanel jenisAnggotaPanel;
@@ -346,8 +316,7 @@ public class FormAnggotaPerpustakaan extends javax.swing.JFrame {
     private javax.swing.JLabel namaLabel;
     private javax.swing.JTextField npmField;
     private javax.swing.JLabel npmLabel;
-    private javax.swing.JCheckBox persetujuanCheckBox;
-    private javax.swing.JLabel persetujuanLabel;
+    private javax.swing.JCheckBox persetujuanCheck;
     private javax.swing.JComboBox<String> prodiCombo;
     private javax.swing.JLabel prodiLabel;
     private javax.swing.JPanel tombolPanel;
