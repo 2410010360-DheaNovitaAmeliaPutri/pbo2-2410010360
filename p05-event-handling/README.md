@@ -16,14 +16,12 @@
 
 2\. Karena keyPressed terjadi saat tombol keyboard ditekan, sebelum karakter tersebut masuk ke dalam JTextField. Akibatnya teks yang dibaca masih belum memuat karakter yang baru ditekan.
 
-3\. Di jendela Output muncul java.lang.NumberFormatException: For input string: "a" beserta stack trace. Aplikasi tidak berhenti, tetapi hasilLabel tidak diperbarui dan pengguna tidak mendapat pesan apa pun.
-atau:
-Program mengalami `NumberFormatException` karena teks berupa huruf tidak dapat diubah menjadi angka. Error akan terlihat pada jendela Output.
+3\. Program mengalami NumberFormatException karena teks berupa huruf tidak dapat diubah menjadi angka. Error akan terlihat pada jendela Output.
 
 ### Praktikum 4
 1\. Pesan akan tercetak 2 kali, karena satu klik tombol menjalankan dua listener. Karena itu satu tombol sebaiknya menggunakan satu cara event agar aksi tidak dijalankan dua kali.
 
-2\. Pada tab Design ditambahkan tombol `%` pada panel operator. Pada tab Source ditambahkan event untuk tombol `%` dan logika modulus pada method `hitung()` agar dapat melakukan operasi hitung modulus menggunakan operator % untuk menghitung sisa modulus.
+2\. Pada tab Design ditambahkan tombol % pada panel operator. Pada tab Source ditambahkan event untuk tombol % dan logika modulus pada method hitung() agar dapat melakukan operasi hitung modulus menggunakan operator % untuk menghitung sisa modulus.
 
 3\. Saat tombol Hapus ditekan, kursor langsung berada di isian pertama karena method hapus() menjalankan: angka1Field.requestFocusInWindow(); Perintah tersebut mengembalikan fokus ke field angka pertama.
 
