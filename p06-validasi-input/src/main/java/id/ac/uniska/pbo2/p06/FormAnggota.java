@@ -390,6 +390,7 @@ public class FormAnggota extends javax.swing.JFrame {
         tombolPanel.add(batalButton);
 
         daftarButton.setText("Daftar");
+        daftarButton.setToolTipText("Centang persetujuan terlebih dahulu sebelum mendaftar");
         daftarButton.setEnabled(false);
         daftarButton.addActionListener(this::daftarButtonActionPerformed);
         tombolPanel.add(daftarButton);
