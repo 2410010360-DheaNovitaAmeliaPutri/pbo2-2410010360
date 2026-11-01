@@ -7,8 +7,8 @@
 ### B. Tabel singkat berisi temuan dari teman dan perbaikan
 | No | Temuan dari teman | Skor | Perbaikan yang saya lakukan | Commit |
 |--|-------------------|:----:|-----------------------------|--------|
-|1	|Jumlah isian yang perlu diperbaiki tampil di dekat tombol saat Daftar diklik, dan dialog sukses muncul bila data benar. Namun tombol Daftar nonaktif sebelum persetujuan dicentang tanpa keterangan apa pun saat kursor diarahkan ke tombol.|1| Menambahkan tooltip pada tombol Daftar dengan pesan "Centang persetujuan terlebih dahulu sebelum mendaftar" agar pengguna mengetahui apa yang harus dilakukan.| P06: Menambahkan tooltip pada tombol Daftar|
-| 2 |Tombol Batal meminta konfirmasi bila ada isian. Namun saat semua isian sudah terisi lalu tombol X diklik, jendela langsung tertutup tanpa peringatan sehingga data hilang. | 1 |Mengubah defaultCloseOperation menjadi DO_NOTHING_ON_CLOSE dan menambahkan konfirmasi saat tombol X diklik agar pengguna bisa memilih untuk menutup form atau membatalkannya. | P06: Menambahkan konfirmasi pada tombol Batal |
+|1	|Jumlah isian yang perlu diperbaiki tampil di dekat tombol saat Daftar diklik, dan dialog sukses muncul bila data benar. Namun tombol Daftar nonaktif sebelum persetujuan dicentang tanpa keterangan apa pun saat kursor diarahkan ke tombol.|1| Menambahkan tooltip pada tombol Daftar dengan pesan "Centang persetujuan terlebih dahulu sebelum mendaftar" agar pengguna mengetahui apa yang harus dilakukan.| b54d33a P06: Menambahkan tooltip pada tombol Daftar|
+| 2 |Tombol Batal meminta konfirmasi bila ada isian. Namun saat semua isian sudah terisi lalu tombol X diklik, jendela langsung tertutup tanpa peringatan sehingga data hilang. | 1 |Mengubah defaultCloseOperation menjadi DO_NOTHING_ON_CLOSE dan menambahkan konfirmasi saat tombol X diklik agar pengguna bisa memilih untuk menutup form atau membatalkannya. | fe7b8a1 P06: Menambahkan konfirmasi pada tombol Batal |
 
 ### C. Tangkapan layar (screenshot) formAnggota dengan pesan kesalahan
 ![Form Anggota - Pesan Kesalahan](Tangkapan%20Layar/FormAnggota%20pesan%20kesalahan.png)
