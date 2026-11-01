@@ -101,8 +101,13 @@ public class FormAnggota extends javax.swing.JFrame {
         daftarButton = new javax.swing.JButton();
         statusLabel = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Pendaftaran Anggota Perpustakaan");
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         headerPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(16, 16, 8, 16));
         headerPanel.setLayout(new javax.swing.BoxLayout(headerPanel, javax.swing.BoxLayout.Y_AXIS));
@@ -456,6 +461,19 @@ public class FormAnggota extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_npmFieldKeyTyped
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        int pilihan = JOptionPane.showConfirmDialog(
+            this,
+            "Apakah Anda yakin ingin menutup form?",
+            "Konfirmasi",
+            JOptionPane.YES_NO_OPTION
+        );
+
+        if (pilihan == JOptionPane.YES_OPTION) {
+            dispose();
+        }
+    }//GEN-LAST:event_formWindowClosing
     
     private boolean periksaNpm() {
         return tandai(npmField, npmPesanLabel, Validator.npm(npmField.getText()));
