@@ -15,7 +15,7 @@ public class UjiValidator {
     private static void cek(String nama, String hasil, boolean harusValid) {
         boolean valid = (hasil == null);
         if (valid != harusValid) {
-        gagal++;
+            gagal++;
         }
         String status = (valid == harusValid) ? "SESUAI " : "SALAH ";
         System.out.println(status + nama + ": " + (valid ? "valid" : hasil));
@@ -28,8 +28,9 @@ public class UjiValidator {
         cek("NPM benar", Validator.npm("2410010123"), true);
         
         cek("Nama terlalu pendek", Validator.nama("Al"), false);
+        cek("Nama mengandung angka", Validator.nama("Siti123"), false);
         cek("Nama benar", Validator.nama("Siti Rahmah"), true);
-        
+
         cek("Email tanpa domain", Validator.email("siti@"), false);
         cek("Email benar", Validator.email("siti.rahmah@uniska-bjm.ac.id"), true);
         
@@ -44,6 +45,4 @@ public class UjiValidator {
             System.out.println(gagal + " aturan belum sesuai");
         }
     }
-
-
 }

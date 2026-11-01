@@ -9,7 +9,7 @@ package id.ac.uniska.pbo2.p06;
  * Setiap method mengembalikan pesan kesalahan, atau null jika nilai sudah benar.
  * Dipisahkan dari tampilan agar mudah diuji dengan JUnit (Pertemuan 13).
  */
-public class Validator {
+public final class Validator {
     
     private Validator() {
         // kelas utilitas, tidak perlu dibuat object-nya
@@ -17,7 +17,7 @@ public class Validator {
      
     public static String wajibDiisi(String nilai, String namaIsian) {
         if (nilai == null || nilai.isBlank()) {
-        return namaIsian + " wajib diisi";
+            return namaIsian + " wajib diisi";
         }
         return null;
     }

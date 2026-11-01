@@ -40,8 +40,7 @@ public class FormAnggota extends javax.swing.JFrame {
         hpField.putClientProperty("JTextField.placeholderText", "08xxxxxxxxxx");
         
         // Label pesan kesalahan: huruf kecil dan warna merah yang mengikuti tema
-        for (JLabel pesan : List.of(npmPesanLabel, namaPesanLabel, prodiPesanLabel, emailPesanLabel,
-    hpPesanLabel)) {
+        for (JLabel pesan : List.of(npmPesanLabel, namaPesanLabel, prodiPesanLabel, emailPesanLabel, hpPesanLabel)) {
             pesan.putClientProperty("FlatLaf.styleClass", "small");
             pesan.setForeground(warnaKesalahan());
         }
@@ -76,34 +75,34 @@ public class FormAnggota extends javax.swing.JFrame {
         npmPesanLabel = new javax.swing.JLabel();
         namaLabel = new javax.swing.JLabel();
         namaField = new javax.swing.JTextField();
+        namaPesanLabel = new javax.swing.JLabel();
         prodiLabel = new javax.swing.JLabel();
         prodiCombo = new javax.swing.JComboBox<>();
         prodiPesanLabel = new javax.swing.JLabel();
         jenisAnggotaLabel = new javax.swing.JLabel();
-        emailField = new javax.swing.JTextField();
-        kontakLabel = new javax.swing.JLabel();
-        emailLabel = new javax.swing.JLabel();
-        emailPesanLabel = new javax.swing.JLabel();
-        hpLabel = new javax.swing.JLabel();
-        hpField = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        alamatArea = new javax.swing.JTextArea();
-        alamatLabel = new javax.swing.JLabel();
-        hpPesanLabel = new javax.swing.JLabel();
-        setujuCheck = new javax.swing.JCheckBox();
-        namaPesanLabel = new javax.swing.JLabel();
         jenisPanel = new javax.swing.JPanel();
         mahasiswaRadio = new javax.swing.JRadioButton();
         dosenRadio = new javax.swing.JRadioButton();
         umumRadio = new javax.swing.JRadioButton();
+        kontakLabel = new javax.swing.JLabel();
+        emailLabel = new javax.swing.JLabel();
+        emailField = new javax.swing.JTextField();
+        emailPesanLabel = new javax.swing.JLabel();
+        hpLabel = new javax.swing.JLabel();
+        hpField = new javax.swing.JTextField();
+        hpPesanLabel = new javax.swing.JLabel();
+        alamatLabel = new javax.swing.JLabel();
+        alamatScrollPane = new javax.swing.JScrollPane();
+        alamatArea = new javax.swing.JTextArea();
+        setujuCheck = new javax.swing.JCheckBox();
         bawahPanel = new javax.swing.JPanel();
-        statusLabel = new javax.swing.JLabel();
         tombolPanel = new javax.swing.JPanel();
         batalButton = new javax.swing.JButton();
         daftarButton = new javax.swing.JButton();
+        statusLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle(" Pendaftaran Anggota Perpustakaan");
+        setTitle("Pendaftaran Anggota Perpustakaan");
 
         headerPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(16, 16, 8, 16));
         headerPanel.setLayout(new javax.swing.BoxLayout(headerPanel, javax.swing.BoxLayout.Y_AXIS));
@@ -112,7 +111,6 @@ public class FormAnggota extends javax.swing.JFrame {
         headerPanel.add(judulLabel);
 
         keteranganLabel.setText("Semua isian wajib diisi, kecuali alamat.");
-        keteranganLabel.setToolTipText("");
         headerPanel.add(keteranganLabel);
 
         getContentPane().add(headerPanel, java.awt.BorderLayout.NORTH);
@@ -124,8 +122,11 @@ public class FormAnggota extends javax.swing.JFrame {
 
         dataAnggotaLabel.setText("Data Anggota");
         gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 6, 0);
         formPanel.add(dataAnggotaLabel, gridBagConstraints);
 
         npmLabel.setDisplayedMnemonic('P');
@@ -138,6 +139,7 @@ public class FormAnggota extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 0, 6, 12);
         formPanel.add(npmLabel, gridBagConstraints);
 
+        npmField.setToolTipText("Hanya angka, tepat 10 digit");
         npmField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 npmFieldFocusLost(evt);
@@ -153,8 +155,10 @@ public class FormAnggota extends javax.swing.JFrame {
         gridBagConstraints.gridy = 1;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 0, 0);
         formPanel.add(npmField, gridBagConstraints);
+
+        npmPesanLabel.setText(" ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
@@ -182,8 +186,16 @@ public class FormAnggota extends javax.swing.JFrame {
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 0, 0);
         formPanel.add(namaField, gridBagConstraints);
+
+        namaPesanLabel.setText(" ");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 0);
+        formPanel.add(namaPesanLabel, gridBagConstraints);
 
         prodiLabel.setDisplayedMnemonic('R');
         prodiLabel.setLabelFor(prodiCombo);
@@ -202,8 +214,10 @@ public class FormAnggota extends javax.swing.JFrame {
         gridBagConstraints.gridy = 5;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 0, 0);
         formPanel.add(prodiCombo, gridBagConstraints);
+
+        prodiPesanLabel.setText(" ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 6;
@@ -217,29 +231,42 @@ public class FormAnggota extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 7;
-        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 0, 6, 12);
         formPanel.add(jenisAnggotaLabel, gridBagConstraints);
 
-        emailField.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent evt) {
-                emailFieldFocusLost(evt);
-            }
-        });
+        jenisPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 12, 5));
+
+        jenisGroup.add(mahasiswaRadio);
+        mahasiswaRadio.setMnemonic('M');
+        mahasiswaRadio.setSelected(true);
+        mahasiswaRadio.setText("Mahasiswa");
+        jenisPanel.add(mahasiswaRadio);
+
+        jenisGroup.add(dosenRadio);
+        dosenRadio.setMnemonic('D');
+        dosenRadio.setText("Dosen");
+        jenisPanel.add(dosenRadio);
+
+        jenisGroup.add(umumRadio);
+        umumRadio.setMnemonic('U');
+        umumRadio.setText("Umum");
+        jenisPanel.add(umumRadio);
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 9;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
-        formPanel.add(emailField, gridBagConstraints);
+        formPanel.add(jenisPanel, gridBagConstraints);
 
         kontakLabel.setText("Kontak");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 8;
+        gridBagConstraints.gridwidth = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.insets = new java.awt.Insets(6, 0, 6, 12);
+        gridBagConstraints.insets = new java.awt.Insets(16, 0, 6, 0);
         formPanel.add(kontakLabel, gridBagConstraints);
 
         emailLabel.setDisplayedMnemonic('E');
@@ -251,6 +278,22 @@ public class FormAnggota extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         gridBagConstraints.insets = new java.awt.Insets(6, 0, 6, 12);
         formPanel.add(emailLabel, gridBagConstraints);
+
+        emailField.setColumns(20);
+        emailField.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                emailFieldFocusLost(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 9;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 0, 0);
+        formPanel.add(emailField, gridBagConstraints);
+
+        emailPesanLabel.setText(" ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 10;
@@ -268,9 +311,15 @@ public class FormAnggota extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(6, 0, 6, 12);
         formPanel.add(hpLabel, gridBagConstraints);
 
+        hpField.setToolTipText("Hanya angka, diawali 08 dan berisi 10–13 digit");
         hpField.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 hpFieldFocusLost(evt);
+            }
+        });
+        hpField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                hpFieldKeyTyped(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -278,19 +327,16 @@ public class FormAnggota extends javax.swing.JFrame {
         gridBagConstraints.gridy = 11;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
-        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 0, 0);
         formPanel.add(hpField, gridBagConstraints);
 
-        alamatArea.setColumns(20);
-        alamatArea.setRows(5);
-        jScrollPane1.setViewportView(alamatArea);
-
+        hpPesanLabel.setText(" ");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 13;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
-        formPanel.add(jScrollPane1, gridBagConstraints);
+        gridBagConstraints.gridy = 12;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 0);
+        formPanel.add(hpPesanLabel, gridBagConstraints);
 
         alamatLabel.setDisplayedMnemonic('L');
         alamatLabel.setLabelFor(alamatArea);
@@ -299,12 +345,20 @@ public class FormAnggota extends javax.swing.JFrame {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 13;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 0, 6, 12);
         formPanel.add(alamatLabel, gridBagConstraints);
+
+        alamatArea.setColumns(20);
+        alamatArea.setRows(5);
+        alamatScrollPane.setViewportView(alamatArea);
+
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 12;
-        gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 0);
-        formPanel.add(hpPesanLabel, gridBagConstraints);
+        gridBagConstraints.gridy = 13;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(4, 0, 0, 0);
+        formPanel.add(alamatScrollPane, gridBagConstraints);
 
         setujuCheck.setMnemonic('T');
         setujuCheck.setText("Saya setuju dengan tata tertib perpustakaan");
@@ -313,35 +367,8 @@ public class FormAnggota extends javax.swing.JFrame {
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 14;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 0, 0, 0);
         formPanel.add(setujuCheck, gridBagConstraints);
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 0);
-        formPanel.add(namaPesanLabel, gridBagConstraints);
-
-        jenisPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 12, 5));
-
-        jenisGroup.add(mahasiswaRadio);
-        mahasiswaRadio.setSelected(true);
-        mahasiswaRadio.setText("Mahasiswa");
-        jenisPanel.add(mahasiswaRadio);
-
-        jenisGroup.add(dosenRadio);
-        dosenRadio.setText("Dosen");
-        jenisPanel.add(dosenRadio);
-
-        jenisGroup.add(umumRadio);
-        umumRadio.setText("Umum");
-        jenisPanel.add(umumRadio);
-
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 1;
-        gridBagConstraints.gridy = 7;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        gridBagConstraints.insets = new java.awt.Insets(4, 0, 4, 0);
-        formPanel.add(jenisPanel, gridBagConstraints);
 
         isiPanel.add(formPanel, java.awt.BorderLayout.NORTH);
 
@@ -349,10 +376,10 @@ public class FormAnggota extends javax.swing.JFrame {
 
         bawahPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(8, 16, 16, 16));
         bawahPanel.setLayout(new java.awt.BorderLayout());
-        bawahPanel.add(statusLabel, java.awt.BorderLayout.PAGE_START);
 
         tombolPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT, 8, 0));
 
+        batalButton.setMnemonic('B');
         batalButton.setText("Batal");
         batalButton.addActionListener(this::batalButtonActionPerformed);
         tombolPanel.add(batalButton);
@@ -363,20 +390,12 @@ public class FormAnggota extends javax.swing.JFrame {
         tombolPanel.add(daftarButton);
 
         bawahPanel.add(tombolPanel, java.awt.BorderLayout.EAST);
+        bawahPanel.add(statusLabel, java.awt.BorderLayout.CENTER);
 
         getContentPane().add(bawahPanel, java.awt.BorderLayout.SOUTH);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void npmFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_npmFieldKeyTyped
-        boolean penuh = npmField.getText().length() >= 10
-                && npmField.getSelectedText() == null;
-
-        if (!Character.isDigit(evt.getKeyChar()) || penuh) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_npmFieldKeyTyped
 
     private void npmFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_npmFieldFocusLost
         if (!npmField.getText().isBlank()) {
@@ -420,6 +439,23 @@ public class FormAnggota extends javax.swing.JFrame {
         daftar();
     }//GEN-LAST:event_daftarButtonActionPerformed
 
+    private void hpFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_hpFieldKeyTyped
+        boolean penuh = hpField.getText().length() >= 13
+                && hpField.getSelectedText() == null;
+
+        if (!Character.isDigit(evt.getKeyChar()) || penuh) {
+            evt.consume();
+        }  
+    }//GEN-LAST:event_hpFieldKeyTyped
+
+    private void npmFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_npmFieldKeyTyped
+        boolean penuh = npmField.getText().length() >= 10
+                && npmField.getSelectedText() == null;
+
+        if (!Character.isDigit(evt.getKeyChar()) || penuh) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_npmFieldKeyTyped
     
     private boolean periksaNpm() {
         return tandai(npmField, npmPesanLabel, Validator.npm(npmField.getText()));
@@ -577,6 +613,7 @@ public class FormAnggota extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea alamatArea;
     private javax.swing.JLabel alamatLabel;
+    private javax.swing.JScrollPane alamatScrollPane;
     private javax.swing.JButton batalButton;
     private javax.swing.JPanel bawahPanel;
     private javax.swing.JButton daftarButton;
@@ -591,7 +628,6 @@ public class FormAnggota extends javax.swing.JFrame {
     private javax.swing.JLabel hpLabel;
     private javax.swing.JLabel hpPesanLabel;
     private javax.swing.JPanel isiPanel;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel jenisAnggotaLabel;
     private javax.swing.ButtonGroup jenisGroup;
     private javax.swing.JPanel jenisPanel;
