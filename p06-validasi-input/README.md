@@ -1,20 +1,24 @@
 # Tugas PBO2 Pertemuan 6
 
 ### A. Foto atau pindaian lembar peer review yang Anda terima dari teman
-![Lembar Peer Review dari Teman]()
-*diisi setelah teman memberikan lembar peer reviewnya
-### B. Tabel singkat berisi temuan dari teman,
+![Lembar Peer Review dari Teman](Tangkapan%20Layar/Lembar_Peer_Review_Heuristik.jpg)
+
+
+### B. Tabel singkat berisi temuan dari teman dan perbaikan
 | No | Temuan dari teman | Skor | Perbaikan yang saya lakukan | Commit |
 |--|-------------------|:----:|-----------------------------|--------|
+|1	|Jumlah isian yang perlu diperbaiki tampil di dekat tombol saat Daftar diklik, dan dialog sukses muncul bila data benar. Namun tombol Daftar nonaktif sebelum persetujuan dicentang tanpa keterangan apa pun saat kursor diarahkan ke tombol.|1| Menambahkan tooltip pada tombol Daftar dengan pesan "Centang persetujuan terlebih dahulu sebelum mendaftar" agar pengguna mengetahui apa yang harus dilakukan.| P06: Menambahkan tooltip pada tombol Daftar|
+| 2 |Tombol Batal meminta konfirmasi bila ada isian. Namun saat semua isian sudah terisi lalu tombol X diklik, jendela langsung tertutup tanpa peringatan sehingga data hilang. | 1 |Mengubah defaultCloseOperation menjadi DO_NOTHING_ON_CLOSE dan menambahkan konfirmasi saat tombol X diklik agar pengguna bisa memilih untuk menutup form atau membatalkannya. | P06: Menambahkan konfirmasi pada tombol Batal |
 
 ### C. Tangkapan layar (screenshot) formAnggota dengan pesan kesalahan
 ![Form Anggota - Pesan Kesalahan](Tangkapan%20Layar/FormAnggota%20pesan%20kesalahan.png)
 
 #### Dan juga Tangkapan layar (screenshot) formAnggotaPerpustakaan yang telah diberikan Validasi sesuai dengan ketentuan tugas yang dikumpulkan di Modul yaitu :
 berisi proyek p06-validasi-input dan FormAnggotaPerpustakaan yang sudah divalidasi, lengkap dengan file .java dan .form.
+
 ![Form Anggota Perpustakaan - Jendela Properties Events Tombol Daftar](Tangkapan%20Layar/FormAnggotaPerpustakaan%20pesan%20kesalahan.png)
 
-### D. Tangkapan layar (screenshot) jendela Navigator yang memperlihatkan label pesan
+### D. Tangkapan layar jendela Navigator FormAnggota yang memperlihatkan label pesan
 ![Form Anggota - Jendela Navigator Label Pesan](Tangkapan%20Layar/Jendela%20Navigator%20yang%20memperlihatkan%20label%20pesan.png)
 
 #### Tangkapan layar FormAnggotaPerpustakaan - Jendela Navigator
@@ -35,3 +39,5 @@ berisi proyek p06-validasi-input dan FormAnggotaPerpustakaan yang sudah divalida
 
 ### F. Deklarasi penggunaan AI
 Disini saya menggunakan claude untuk membantu saya memeriksa apakah ada yang masih terewat atau belum sesuai dengan kriteria penilaiannya, setelah saya selesai mengerjakan semuanya sesuai dengan ketentuan tugasnya.
+
+### catatan: Untuk bagian latihan mandiri pada pengembangan FormAnggotaPerpustakaan, saya juga menerapkannya pada FormAnggota agar bisa lebih memahami dan terbiasa menggunakan validasi input serta penerapannya pada form yang saya buat.
