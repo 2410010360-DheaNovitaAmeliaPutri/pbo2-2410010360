@@ -67,11 +67,12 @@ public class DaftarBelanja extends javax.swing.JFrame {
         jumlahLabel = new javax.swing.JLabel();
         jumlahSpinner = new javax.swing.JSpinner();
         pesanLabel = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         tombolPanel = new javax.swing.JPanel();
         tambahButton = new javax.swing.JButton();
         bersihkanButton = new javax.swing.JButton();
         tabelPanel = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        barangScroll = new javax.swing.JScrollPane();
         barangTable = new javax.swing.JTable();
         bawahPanel = new javax.swing.JPanel();
         statusLabel = new javax.swing.JLabel();
@@ -81,6 +82,7 @@ public class DaftarBelanja extends javax.swing.JFrame {
 
         formPanel.setLayout(new java.awt.BorderLayout());
 
+        isianPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
         isianPanel.setLayout(new java.awt.GridLayout(0, 2, 8, 8));
 
         namaLabel.setLabelFor(namaField);
@@ -112,7 +114,10 @@ public class DaftarBelanja extends javax.swing.JFrame {
 
         formPanel.add(isianPanel, java.awt.BorderLayout.NORTH);
 
-        tombolPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 8));
+        jPanel1.setLayout(new java.awt.BorderLayout());
+        formPanel.add(jPanel1, java.awt.BorderLayout.CENTER);
+
+        tombolPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 8, 8));
 
         tambahButton.setText("Tambah");
         tambahButton.addActionListener(this::tambahButtonActionPerformed);
@@ -128,6 +133,7 @@ public class DaftarBelanja extends javax.swing.JFrame {
 
         tabelPanel.setLayout(new java.awt.BorderLayout());
 
+        barangTable.setBorder(javax.swing.BorderFactory.createEmptyBorder(12, 12, 12, 12));
         barangTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -139,9 +145,9 @@ public class DaftarBelanja extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(barangTable);
+        barangScroll.setViewportView(barangTable);
 
-        tabelPanel.add(jScrollPane1, java.awt.BorderLayout.CENTER);
+        tabelPanel.add(barangScroll, java.awt.BorderLayout.CENTER);
 
         bawahPanel.setLayout(new java.awt.BorderLayout(8, 8));
         tabelPanel.add(bawahPanel, java.awt.BorderLayout.LINE_START);
@@ -209,6 +215,7 @@ public class DaftarBelanja extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JScrollPane barangScroll;
     private javax.swing.JTable barangTable;
     private javax.swing.JPanel bawahPanel;
     private javax.swing.JButton bersihkanButton;
@@ -216,7 +223,7 @@ public class DaftarBelanja extends javax.swing.JFrame {
     private javax.swing.JTextField hargaField;
     private javax.swing.JLabel hargaLabel;
     private javax.swing.JPanel isianPanel;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel jumlahLabel;
     private javax.swing.JSpinner jumlahSpinner;
     private javax.swing.JComboBox<Kategori> kategoriCombo;
