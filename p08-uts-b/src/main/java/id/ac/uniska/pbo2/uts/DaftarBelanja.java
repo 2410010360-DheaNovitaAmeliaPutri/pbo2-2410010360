@@ -5,22 +5,48 @@
 package id.ac.uniska.pbo2.uts;
 
 import com.formdev.flatlaf.FlatLightLaf;
+import java.awt.Color;
+import javax.swing.JComponent;
 
 /**
- *
- * @author ASUS
+ *Nama : Dhea Novita Amelia Putri
+ *NPM : 2410010360
  */
 public class DaftarBelanja extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(DaftarBelanja.class.getName());
 
-    /**
-     * Creates new form DaftarBelanja
-     */
+    private final BarangTableModel model = new BarangTableModel();
+
     public DaftarBelanja() {
         initComponents();
+        barangTable.setModel(model);
+        pesanLabel.setForeground(Color.RED);
+        pesanLabel.setText("");
+        hargaField.putClientProperty("JTextField.placeholderText", "Tanpa titik, contoh 15000");
+        getRootPane().setDefaultButton(tambahButton);
+        perbaruiRingkasan();
+        setLocationRelativeTo(null);
     }
 
+    private void tampilkanPesan(String pesan, JComponent isian) {
+        pesanLabel.setText(pesan);
+        isian.requestFocus();
+    }
+
+    private void kosongkanForm() {
+        namaField.setText("");
+        hargaField.setText("");
+        kategoriCombo.setSelectedIndex(0);
+        jumlahSpinner.setValue(1);
+        pesanLabel.setText("");
+    }
+
+    private void perbaruiRingkasan() {
+        statusLabel.setText("Total " + BarangTableModel.formatRupiah(model.hitungTotal())
+                + ", diskon " + BarangTableModel.formatRupiah(model.hitungDiskon())
+                + ", bayar " + BarangTableModel.formatRupiah(model.hitungBayar()));
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -32,56 +58,68 @@ public class DaftarBelanja extends javax.swing.JFrame {
 
         formPanel = new javax.swing.JPanel();
         isianPanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        namaLabel = new javax.swing.JLabel();
         namaField = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        kategoriLabel = new javax.swing.JLabel();
         kategoriCombo = new javax.swing.JComboBox<>();
-        jLabel4 = new javax.swing.JLabel();
+        hargaLabel = new javax.swing.JLabel();
         hargaField = new javax.swing.JTextField();
-        Jumlah = new javax.swing.JLabel();
+        jumlahLabel = new javax.swing.JLabel();
         jumlahSpinner = new javax.swing.JSpinner();
+        pesanLabel = new javax.swing.JLabel();
         tombolPanel = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        tambahButton = new javax.swing.JButton();
         bersihkanButton = new javax.swing.JButton();
         tabelPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         barangTable = new javax.swing.JTable();
         bawahPanel = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        statusLabel = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Daftar Belanja");
 
         formPanel.setLayout(new java.awt.BorderLayout());
 
         isianPanel.setLayout(new java.awt.GridLayout(0, 2, 8, 8));
 
-        jLabel1.setText("Nama Barang");
-        isianPanel.add(jLabel1);
+        namaLabel.setLabelFor(namaField);
+        namaLabel.setText("Nama Barang");
+        isianPanel.add(namaLabel);
         isianPanel.add(namaField);
 
-        jLabel3.setText("Kategori");
-        isianPanel.add(jLabel3);
+        kategoriLabel.setLabelFor(kategoriCombo);
+        kategoriLabel.setText("Kategori");
+        isianPanel.add(kategoriLabel);
 
-        kategoriCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        kategoriCombo.setModel(new javax.swing.DefaultComboBoxModel<>(Kategori.values()));
         isianPanel.add(kategoriCombo);
 
-        jLabel4.setText("Harga (Rp)");
-        isianPanel.add(jLabel4);
+        hargaLabel.setLabelFor(hargaField);
+        hargaLabel.setText("Harga (Rp)");
+        isianPanel.add(hargaLabel);
         isianPanel.add(hargaField);
 
-        Jumlah.setText("jLabel5");
-        isianPanel.add(Jumlah);
+        jumlahLabel.setLabelFor(jumlahSpinner);
+        jumlahLabel.setText("Jumlah");
+        isianPanel.add(jumlahLabel);
+
+        jumlahSpinner.setModel(new javax.swing.SpinnerNumberModel(1, 1, 99, 1));
         isianPanel.add(jumlahSpinner);
+
+        pesanLabel.setText(" ");
+        isianPanel.add(pesanLabel);
 
         formPanel.add(isianPanel, java.awt.BorderLayout.NORTH);
 
         tombolPanel.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 0, 8));
 
-        jButton1.setText("Tambah");
-        tombolPanel.add(jButton1);
+        tambahButton.setText("Tambah");
+        tambahButton.addActionListener(this::tambahButtonActionPerformed);
+        tombolPanel.add(tambahButton);
 
         bersihkanButton.setText("Bersihkan");
+        bersihkanButton.addActionListener(this::bersihkanButtonActionPerformed);
         tombolPanel.add(bersihkanButton);
 
         formPanel.add(tombolPanel, java.awt.BorderLayout.CENTER);
@@ -105,17 +143,61 @@ public class DaftarBelanja extends javax.swing.JFrame {
 
         tabelPanel.add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
-        bawahPanel.setLayout(new java.awt.BorderLayout());
+        bawahPanel.setLayout(new java.awt.BorderLayout(8, 8));
         tabelPanel.add(bawahPanel, java.awt.BorderLayout.LINE_START);
 
-        jLabel2.setText("jLabel2");
-        tabelPanel.add(jLabel2, java.awt.BorderLayout.PAGE_END);
+        statusLabel.setText(" ");
+        tabelPanel.add(statusLabel, java.awt.BorderLayout.PAGE_END);
 
         getContentPane().add(tabelPanel, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void tambahButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tambahButtonActionPerformed
+        tambahBarang();
+    }//GEN-LAST:event_tambahButtonActionPerformed
+
+    private void bersihkanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bersihkanButtonActionPerformed
+        bersihkan();
+    }//GEN-LAST:event_bersihkanButtonActionPerformed
+
+        private void tambahBarang() {
+        String nama = namaField.getText().trim();
+        if (nama.isEmpty()) {
+            tampilkanPesan("Nama barang wajib diisi", namaField);
+            return;
+        }
+        if (model.sudahAda(nama)) {
+            tampilkanPesan("Barang " + nama + " sudah ada di daftar", namaField);
+            return;
+        }
+
+        String teksHarga = hargaField.getText().trim();
+        if (!teksHarga.matches("\\d{1,8}")) {
+            tampilkanPesan("Harga harus angka 1 sampai 10000000", hargaField);
+            return;
+        }
+        int harga = Integer.parseInt(teksHarga);
+        if (harga < 1 || harga > 10000000) {
+            tampilkanPesan("Harga harus angka 1 sampai 10000000", hargaField);
+            return;
+        }
+
+        Kategori kategori = (Kategori) kategoriCombo.getSelectedItem();
+        int jumlah = (Integer) jumlahSpinner.getValue();
+
+        model.tambah(new Barang(nama, kategori, harga, jumlah));
+        kosongkanForm();
+        perbaruiRingkasan();
+        namaField.requestFocus();
+    }
+
+    private void bersihkan() {
+        kosongkanForm();
+        namaField.requestFocus();
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -127,23 +209,24 @@ public class DaftarBelanja extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Jumlah;
     private javax.swing.JTable barangTable;
     private javax.swing.JPanel bawahPanel;
     private javax.swing.JButton bersihkanButton;
     private javax.swing.JPanel formPanel;
     private javax.swing.JTextField hargaField;
+    private javax.swing.JLabel hargaLabel;
     private javax.swing.JPanel isianPanel;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel jumlahLabel;
     private javax.swing.JSpinner jumlahSpinner;
-    private javax.swing.JComboBox<String> kategoriCombo;
+    private javax.swing.JComboBox<Kategori> kategoriCombo;
+    private javax.swing.JLabel kategoriLabel;
     private javax.swing.JTextField namaField;
+    private javax.swing.JLabel namaLabel;
+    private javax.swing.JLabel pesanLabel;
+    private javax.swing.JLabel statusLabel;
     private javax.swing.JPanel tabelPanel;
+    private javax.swing.JButton tambahButton;
     private javax.swing.JPanel tombolPanel;
     // End of variables declaration//GEN-END:variables
 }

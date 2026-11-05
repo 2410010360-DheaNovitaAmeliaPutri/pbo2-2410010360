@@ -5,9 +5,10 @@
 package id.ac.uniska.pbo2.uts;
 
 /**
- *
- * @author ASUS
+ *Nama : Dhea Novita Amelia Putri
+ *NPM : 2410010360
  */
+
 public enum Kategori {
     ALAT_TULIS("Alat Tulis"),
     MAKANAN("Makanan"),
